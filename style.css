@@ -1,0 +1,661 @@
+/* Opiskelijakortti */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+    background-color: #f5f7f5;
+    color: #255d46;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+/* Header */
+
+.header {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 20px;
+}
+
+.header-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-row h1 {
+    margin: 0;
+    color: #255d46;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.active-text {
+    background-color: #ddeee2;
+    border: 1px solid #b9d8c0;
+    color: #255d46;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.header-info small {
+    color: #4b5563;
+    margin-top: 4px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Varmennettu ID */
+
+.verified {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background-color: #ddeee2;
+    border: 1px solid #b9d8c0;
+    color: #255d46;
+    font-weight: bold;
+}
+
+/* Kortti */
+
+.student-card {
+    background-color: #ffffff;
+    margin: 0 20px;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid #dce7de;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.student-card h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #255d46;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Opiskelijatiedot */
+
+.student-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.photo {
+    flex-shrink: 0;
+}
+
+.photo img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.details h3 {
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.degree {
+    color: #255d46;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Status- ja voimassaoloruutu */
+
+.info-row {
+    display: flex;
+    gap: 10px;
+}
+
+.info-box {
+    flex: 1;
+    background-color: #eef5f0;
+    border: 1px solid #b9d8c0;
+    border-radius: 18px;
+    padding: 15px;
+}
+
+.info-box h4 {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #255d46;
+
+}
+
+.info-box p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* Opiskelijaedut */
+
+.benefits {
+    margin: 25px 20px;
+}
+
+.benefits-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.benefits-header h2 {
+    font-size: 32px;
+}
+
+.new-badge {
+    background-color: #ddeee2;
+    color: #255d46;
+    border: 1px solid #b9d8c0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Etukortti */
+
+.benefit-card {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #dce7de;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    background-color: #eef5f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #255d46;
+}
+
+.benefit-text {
+    flex: 1;
+}
+
+.benefit-text h3 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.benefit-text p {
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+.arrow {
+    font-size: 30px;
+    color: #255d46;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    background-color: white;
+
+    border-top: 1px solid #dce7de;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 15px 0;
+}
+
+footer a,
+footer span {
+    color: #255d46;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+footer a:visited {
+    color: #255d46;
+}
+
+footer a:hover {
+    color: #255d46;
+}
+
+footer a:active {
+    color: #255d46;
+}
+
+/* Paasivu */
+
+.campus {
+    margin-top: 15px;
+    color: #666;
+}
+
+.student-banner {
+    margin-top: 20px;
+    background: #2d6b52;
+    color: white;
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student-banner button {
+    background: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.show-button {
+    background: white;
+    color: #255d46;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.profile {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+.search-box {
+    margin-top: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+}
+
+.tasks {
+    background: #ebefec;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 18px;
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.task {
+    background: white;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.shortcuts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.shortcut {
+    background: white;
+    border-radius: 18px;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.restaurant {
+    margin-top: 20px;
+    background: #ebefec;
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-row h1 {
+    margin: 0;
+    color: #255d46;
+    font-size: 24px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.active-text {
+    background-color: #ddeee2;
+    border: 1px solid #b9d8c0;
+    color: #255d46;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.header-info small {
+    color: #4b5563;
+    margin-top: 4px;
+}
+
+/* LUKUJÄRJESTYS */
+
+.schedule-header {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.semester {
+    color: #255d46;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.schedule-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.schedule-title h2 {
+    font-size: 36px;
+    color: #255d46;
+}
+
+.week-info {
+    margin-top: 5px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.view-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.view-buttons button {
+    border: none;
+    background-color: #f1f4f1;
+    color: #666;
+    padding: 6px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.active-view {
+    background-color: #255d46 !important;
+    color: white !important;
+}
+
+/* Kalenteri */
+
+.calendar {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.calendar-header button {
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: #255d46;
+    cursor: pointer;
+}
+
+.week-days {
+    display: flex;
+    gap: 5px;
+}
+
+.day {
+    flex: 1;
+    background-color: #f7f7f7;
+    border-radius: 14px;
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.day span {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+.day h3 {
+    color: #255d46;
+}
+
+.active-day {
+    background-color: #255d46;
+}
+
+.active-day span,
+.active-day h3 {
+    color: white;
+}
+
+/* Päivän tiedot */
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.day-header h2 {
+    color: #255d46;
+    line-height: 1.2;
+}
+
+.event-count {
+    background-color: #bfe6c8;
+    color: #255d46;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Kurssikortit */
+
+.lesson-card {
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    border-left: 5px solid #2f8d62;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-time {
+    min-width: 80px;
+    font-weight: 700;
+    color: #255d46;
+}
+
+.lesson-content {
+    flex: 1;
+}
+
+.lesson-content h3 {
+    color: #255d46;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.lesson-content p {
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.lesson-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.lesson-buttons button {
+    border: none;
+    background-color: #ddeee2;
+    color: #255d46;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Huomio-laatikko */
+
+.lesson-note {
+    margin-top: 15px;
+    background-color: #eef5f0;
+    padding: 12px;
+    border-radius: 12px;
+    color: #255d46;
+    font-size: 14px;
+}
+
+/* Responsiivisuus */
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .shortcuts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-row {
+        flex-direction: column;
+    }
+
+    .student-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lesson-card {
+        flex-direction: column;
+    }
+
+    .lesson-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (orientation: landscape) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .shortcuts {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .student-info {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .info-row {
+        flex-direction: row;
+    }
+}
