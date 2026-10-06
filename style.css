@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 500px;
     margin: auto;
     padding-bottom: 20px;
 }
@@ -638,6 +638,28 @@ footer a:active {
 
     .lesson-buttons {
         flex-direction: column;
+    }
+
+    .schedule-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .calendar {
+        margin: 10px;
+    }
+
+    .day-header {
+        margin: 10px;
+    }
+
+    .student-card {
+        margin: 0 10px;
+    }
+
+    .benefits {
+        margin: 20px 10px;
     }
 }
 
