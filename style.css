@@ -613,7 +613,9 @@ footer a:active {
 @media (max-width: 768px) {
     .container {
         width: 100%;
+        max-width: 100%;
         padding: 10px;
+        box-sizing: border-box;
     }
 
     .shortcuts {
@@ -657,5 +659,17 @@ footer a:active {
 
     .info-row {
         flex-direction: row;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        box-sizing: border-box;
     }
 }
