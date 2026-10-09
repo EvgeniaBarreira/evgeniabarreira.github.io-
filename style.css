@@ -561,7 +561,7 @@ footer a:active {
 }
 
 .lesson-time {
-    min-width: 80px;
+    min-width: 65px;
     font-weight: 700;
     color: #255d46;
 }
@@ -572,9 +572,12 @@ footer a:active {
 
 .lesson-content h3 {
     color: #255d46;
-    font-size: 28px;
+    font-size: 20px;
     margin-bottom: 10px;
+    line-height: 1.3;
+    word-break: break-word;
 }
+
 
 .lesson-content p {
     color: #666;
@@ -768,7 +771,7 @@ footer a:active {
     }
 
     .lesson-content h3 {
-        font-size: 22px;
+        font-size: 18px;
         word-break: break-word;
     }
 
@@ -809,4 +812,3 @@ footer a:active {
         max-width: 900px;
     }
 }
-
