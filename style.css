@@ -609,21 +609,47 @@ footer a:active {
 }
 
 /* Responsiivisuus */
+@media screen and (max-width: 768px) {
 
-@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .container {
         width: 100%;
         max-width: 100%;
         padding: 10px;
-        box-sizing: border-box;
     }
 
-    .shortcuts {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    /* Header */
 
-    .info-row {
+    .header {
         flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .title-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .title-row h1 {
+        font-size: 22px;
+        white-space: normal;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Opiskelijakortti */
+
+    .student-card {
+        margin: 0;
+        padding: 18px;
     }
 
     .student-info {
@@ -632,13 +658,69 @@ footer a:active {
         text-align: center;
     }
 
-    .lesson-card {
+    .photo img {
+        width: 120px;
+        height: 160px;
+    }
+
+    .details h3 {
+        font-size: 22px;
+    }
+
+    .info-row {
         flex-direction: column;
     }
 
-    .lesson-buttons {
-        flex-direction: column;
+    /* Opiskelijaedut */
+
+    .benefits {
+        margin: 20px 0;
     }
+
+    .benefits-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .benefits-header h2 {
+        font-size: 28px;
+    }
+
+    .benefit-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Pääsivu */
+
+    .student-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .show-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .tasks-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .shortcuts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .restaurant {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    /* Lukujärjestys */
 
     .schedule-title {
         flex-direction: column;
@@ -646,52 +728,85 @@ footer a:active {
         gap: 10px;
     }
 
+    .schedule-title h2 {
+        font-size: 28px;
+    }
+
+    .view-buttons {
+        width: 100%;
+    }
+
+    .view-buttons button {
+        flex: 1;
+    }
+
     .calendar {
-        margin: 10px;
+        margin: 10px 0;
+        padding: 12px;
+    }
+
+    .week-days {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 4px;
+    }
+
+    .day {
+        min-width: 0;
     }
 
     .day-header {
-        margin: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 10px 0;
     }
 
-    .student-card {
-        margin: 0 10px;
+    .lesson-card {
+        flex-direction: column;
+        margin: 10px 0;
     }
 
-    .benefits {
-        margin: 20px 10px;
+    .lesson-content h3 {
+        font-size: 22px;
+        word-break: break-word;
+    }
+
+    .lesson-buttons {
+        flex-direction: column;
+    }
+
+    .lesson-buttons button {
+        width: 100%;
+    }
+
+    /* Footer */
+
+    footer a,
+    footer span {
+        font-size: 12px;
     }
 }
 
-@media (orientation: landscape) {
+/* Tabletit */
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
     .container {
-        max-width: 100%;
-        padding: 15px;
+        max-width: 700px;
     }
 
     .shortcuts {
         grid-template-columns: repeat(4, 1fr);
     }
+}
 
-    .student-info {
-        flex-direction: row;
-        align-items: flex-start;
-        text-align: left;
-    }
+/* Tietokoneet */
 
-    .info-row {
-        flex-direction: row;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-    }
+@media screen and (min-width: 1025px) {
 
     .container {
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-        box-sizing: border-box;
+        max-width: 900px;
     }
 }
+
